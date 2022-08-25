@@ -10,7 +10,7 @@ export const SideMenu: React.FC = () => {
       {sideMenuList.map((e, i) => {
         return (
           <Menu.SubMenu
-            key={`side-menu-${i}`}
+            key={`side-menu${i}`}
             title={
               <span>
                 <GifOutlined />
@@ -21,7 +21,7 @@ export const SideMenu: React.FC = () => {
             {e.subMenu.map((se, si) => {
               return (
                 <Menu.SubMenu
-                  key={`sub-menu-${si}`}
+                  key={`side-menu${i}-item${si}`}
                   title={
                     <span>
                       <GifOutlined />
@@ -31,7 +31,7 @@ export const SideMenu: React.FC = () => {
                 >
                   {se.subMenu.map((sse, ssi) => {
                     return (
-                      <Menu.Item key={`sub-sub-menu-${ssi}`}>
+                      <Menu.Item key={`side-menu${i}-item${si}-items${ssi}`}>
                         <span>
                           <GifOutlined />
                           {sse}
